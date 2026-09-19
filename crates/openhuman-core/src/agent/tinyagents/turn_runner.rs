@@ -24,10 +24,10 @@ use tinyagents_registry::DiagnosticSeverity;
 use tokio::sync::mpsc::Sender;
 
 use crate::agent::harness::tool_result_artifacts::TINYAGENTS_TOOL_RESULT_ARTIFACT_STORE;
-use crate::agent::harness::{MAX_SPAWN_DEPTH, run_queue::RunQueue};
+use crate::agent::harness::{run_queue::RunQueue, MAX_SPAWN_DEPTH};
 use crate::agent::messages::ChatMessage;
 use crate::agent::progress::AgentProgress;
-use crate::agent::tinyagents::harness_assembly::{AssembledTurnHarness, assemble_turn_harness};
+use crate::agent::tinyagents::harness_assembly::{assemble_turn_harness, AssembledTurnHarness};
 use crate::agent::tinyagents::middleware::TurnContextMiddleware;
 use crate::agent::tinyagents::observability::{CapPauser, OpenhumanEventBridge, SubagentScope};
 use crate::agent::tinyagents::run_cancellation_context::with_run_cancellation;
